@@ -40,18 +40,18 @@ def game2():
     lis=['MCPE','MINECRAFT']
     return lis[random.randint(0,1)]
 def passw():
-    return mesh.gen(random.randint(4,10),'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890')
+    return mesh.gen(random.randint(4,10),'1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890')
 def mail_get():
-    lis=['loopy','astorld','hxel','imdex','tnd','dfjk','hackef','ifty']
-    mails=['mail.ru','gmail.com','rambler.ru']
-    mail=lis[random.randint(0,7)]+'@'+mails[random.randint(0,2)]
+    lis=['loopy','astorld','hxel','imdex','tnd','dfjk','hackef','ifty','arizaka','chikatila','gulgulgul','donat','xitmenjoker','goldenman','gtxgold','cxghj','xobit','cloloreddig','qwemykow','fsawry','serty','koli']
+    mails=['mail.ru','gmail.com','rambler.ru','ya.ru','alice.it','tim.it']
+    mail=lis[random.randint(0,22)]+'@'+mails[random.randint(0,5)]
     return mail
 def sylka_prem():
     lis=['https://vk.com/akk_deshovo?z=photo-194065772_457239019%2Falbum-194065772_00%2Frev','https://vk.com/akk_deshovo?z=photo-194065772_457239023%2Falbum-194065772_00%2Frev','https://vk.com/akk_deshovo?z=photo-194065772_457239020%2Fwall-194065772_3','https://vk.com/akk_deshovo?z=photo-194065772_457239021%2Fwall-194065772_3']
-    return lis[random.randint(0,2)]
+    return lis[random.randint(0,4)]
 def pochta():
-    lis=['borzuyakk@rambler.ru','bspremuimakk@gmail.com','hakibsakk@mail.ru','jokerbs@rambler.ru','nagibator603ak@gmail.com','diddyak@gmail.com']
-    return lis[random.randint(0,5)]
+    lis=['karakurt@alice.it','jagergjig@gmail.com','mailofmailofmail@mail.ru','azoroza@rambler.ru','yajkiyt784@yandex.ru','pukpuk90@ya.ru','borzuyakk@rambler.ru','bspremuimakk@gmail.com','hakibsakk@mail.ru','jokerbs@rambler.ru','nagibator603ak@gmail.com','diddyak@gmail.com']
+    return lis[random.randint(0,11)]
 
 while True:
     try:
