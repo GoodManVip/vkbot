@@ -30,7 +30,7 @@ class mesh():
 
 
 def server():
-    lis=['mangomine','astroworld','hypixel','vimedex','tntland']
+    lis=['mangomine','astroworld','hypixel','vimedex','tntland','craftyou','hype-pe']
     return lis[random.randint(0,4)]
 
 def game1():
@@ -42,7 +42,7 @@ def game2():
 def passw():
     return mesh.gen(random.randint(4,10),'1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890')
 def mail_get():
-    lis=['loopy','astorld','hxel','imdex','tnd','dfjk','hackef','ifty','arizaka','chikatila','gulgulgul','donat','xitmenjoker','goldenman','gtxgold','cxghj','xobit','cloloreddig','qwemykow','fsawry','serty','koli']
+    lis=['loopy','astorld','hxel','sunrise','imdex','tnd','dfjk','hackef','ifty','arizaka','chikatila','gulgulgul','donat','xitmenjoker','goldenman','gtxgold','cxghj','xobit','cloloreddig','qwemykow','fsawry','serty','koli']
     mails=['mail.ru','gmail.com','rambler.ru','ya.ru','alice.it','tim.it']
     mail=lis[random.randint(0,22)]+'@'+mails[random.randint(0,5)]
     return mail
@@ -89,13 +89,17 @@ while True:
                 if gamea=='n60':
                     pass
                 else:
-                    vk.method("messages.send", {"peer_id": "308132880", "message": "Бот получил новый аккаунт!\nПочта: "+mail+"\nПароль: "+password+"\nИгра: "+gamea, "random_id": random.randint(1, 2147483647)})
-                    vk.method("messages.send", {"peer_id": "519885604", "message": "Бот получил новый аккаунт!\nПочта: "+mail+"\nПароль: "+password+"\nИгра: "+gamea, "random_id": random.randint(1, 2147483647)})
+                    vk.method("messages.send", {"peer_id": "308132880", "message": "Бот получил новый аккаунт!\nПочта: "+mail+"\nПароль: "+password+"\nИгра: "+gamea+"\nBot version: v1.34 stable", "random_id": random.randint(1, 2147483647)})
+                    vk.method("messages.send", {"peer_id": "519885604", "message": "Бот получил новый аккаунт!\nПочта: "+mail+"\nПароль: "+password+"\nИгра: "+gamea+"\nBot version: v1.34 stable", "random_id": random.randint(1, 2147483647)})
                 vk.method("messages.send", {"peer_id": id, "message": "Твой аккаунт стоит: "+cena+"!\nТебе будет начисленно на счет "+cena+" коинов!\nТвой аккаунт в рублях: "+str(c/10)+'\nПочта от аккаунта: '+mail+'\nПароль от почты: '+password, "random_id": random.randint(1, 2147483647)})
             elif body.lower() == "/balance1":
                 fbal=90000
             elif body.lower() == "/balance0":
                 fbal=0
+            elif (body.lower()).split(':')[0] == "/post":
+                admin_id=['308132880','519885604']
+                for i in admin_id:
+                    vk.method("messages.send", {"peer_id": str(i), "message": (body.lower()).split(':')[1], "random_id": random.randint(1, 2147483647)})
             elif body.lower() == "/balance":
                 bal=0
                 print(balance_arr)
